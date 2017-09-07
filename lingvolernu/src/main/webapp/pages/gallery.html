@@ -1,0 +1,89 @@
+<md-content class="whiteframe-content">
+    <md-whiteframe class="md-whiteframe-5dp content-panel" layout="column" flex>
+        <div layout="row" flex>
+            <md-card themed condition='$index%3' md-theme="default" flex>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline title-20">{{::user.full_name}}</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-md card-media">
+                            <img ng-src='{{::user.profile_picture}}' alt=""/>
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+            </md-card>
+        </div>
+        <div layout="row" layout-padding flex>
+            <div layout="column" flex="50">
+                <div layout="row" layout-align="end start">
+                    <md-select ng-model="from" class="margin-0">
+                        <md-option ng-repeat="from in langs" value="{{from.shortcat}}">{{from.description}}</md-option>
+                    </md-select>
+                </div>
+                <md-input-container flex class="bordered margin-0">
+                    <label></label>
+                    <textarea ng-model="text"  ng-model-options='{debounce: 1000}' ng-change="translate()" md-maxlength="10000" rows="5"></textarea>
+                </md-input-container>
+            </div>
+
+            <i class="fa fa-arrows-h margin-top-10"></i>
+
+            <div layout="column" flex="50">
+                <div layout="row" layout-align="start start">
+                    <md-select ng-model="to" class="margin-0">
+                        <md-option ng-repeat="to in langs" value="{{to.shortcat}}">{{to.description}}</md-option>
+                    </md-select>
+                </div>
+                <md-input-container flex class="bordered margin-0">
+                    <label></label>
+                    <textarea ng-model="translation.text" rows="5" readonly border="1"></textarea>
+                </md-input-container>
+            </div>
+        </div>
+
+        <div layout="row" layout-padding flex>
+            <div flex="50">
+                <div layout-padding flex>
+                    <div layout="column" layout-padding ng-if="vocabulary.def.length > 0">
+                        <b>Vocabulary:</b>
+                        <div ng-repeat="def in vocabulary.def">
+                            <div ng-repeat="tr in def.tr">
+                                {{tr.text}}
+                                <span ng-if="tr.mean.length > 0">
+                                    (<span ng-repeat="mean in tr.mean">
+                                        {{mean.text}}
+                                    </span>)
+                                </span>
+                                <span ng-repeat="syn in tr.syn">
+                                    {{syn.text}}
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--{{vocabulary}}-->
+
+
+        <div layout="row" layout-wrap layout-align="center">
+            <div flex-xs="90" flex-sm="50" flex-md="33" flex="20" layout-wrap ng-repeat="media in medias">
+                <md-card themed condition='$index%3' md-theme="default" id='record{{media.id}}'>
+                    <md-card-title-media layout-wrap>
+                        <div class="md-media-lg card-media">
+                            <img layout-padding  ng-src='{{media.images.standard_resolution.url}}' alt=""/>
+                        </div>
+                    </md-card-title-media>
+
+                    <md-card-actions layout="row" layout-wrap layout-align="end center">
+                        <i class="fa fa-heart-o" aria-hidden="true">&nbsp;</i> {{media.likes.count}}
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </div>
+    </md-whiteframe>
+</md-content>

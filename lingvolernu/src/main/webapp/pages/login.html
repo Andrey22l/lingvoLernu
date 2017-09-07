@@ -1,0 +1,60 @@
+<md-content class="login-panel whiteframe-login">
+    <md-whiteframe class="md-whiteframe-5dp" layout="column">
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <i class="fa fa-sign-in fa-3x">&nbsp;</i><h2 class="md-flex">Login</h2>
+            </div>
+        </md-toolbar>
+        <div layout="row">
+            <div layout="column" flex="40" layout-align="start center" class="login-content-padding login-content-horisontal-line">
+                <span flex></span>
+                <div layout="column" >
+                    <md-button
+                        class="md-raised facebook-button"  
+                        ng-click="authenticate('facebook')"><i class="fa fa-facebook-f fa-2x fa-icon-position">&nbsp;</i>Login with Facebook
+                    </md-button>
+                    <md-button
+                        class="md-raised instagram-button"  
+                        ng-click="authenticate('instagram')"><i class="fa fa-instagram fa-2x fa-icon-position">&nbsp;</i>Login with Instagram
+                    </md-button>
+                    <md-button
+                        class="md-raised linkedin-button"  
+                        ng-click="authenticate('linkedin')"><i class="fa fa-linkedin fa-2x fa-icon-position">&nbsp;</i>Login with Linkedin
+                    </md-button>
+                    <md-button
+                        class="md-raised default-button"  
+                        ng-click="authenticate('default')"><i class="fa fa-desktop fa-2x fa-icon-position">&nbsp;</i>Default login
+                        <md-tooltip md-direction="bottom" style="font-size: 18px;">
+                            Uses default token
+                        </md-tooltip>
+                    </md-button>
+                </div>
+                <span flex></span>
+            </div>
+
+            <div layout="column" flex class="login-content-padding">
+                <div flex layout="row">
+                    <md-input-container flex class="md-imput-container-bottom-login">
+                        <label><i class="fa fa-envelope-o">&nbsp;</i>Login:</label>
+                        <input ng-model="user.login" type="email">
+                    </md-input-container>
+                </div>
+                <div flex layout="row">
+                    <md-input-container flex class="md-imput-container-top-login">
+                        <label><i class="fa fa-key">&nbsp;</i>Password</label>
+                        <input ng-model="user.password" type="password">
+                    </md-input-container>
+                </div>
+                <div flex layout="row" layout-align="center center">
+                    <md-button flex
+                               class="md-primary md-raised"  
+                               ng-click="login()">Login
+                    </md-button>
+                </div>
+                <div flex layout="row" layout-align="center center" layout-padding>
+                    No account? <a href="">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </md-whiteframe>
+</md-content>

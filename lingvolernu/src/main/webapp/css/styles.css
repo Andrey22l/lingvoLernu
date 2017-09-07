@@ -1,0 +1,98 @@
+.login-panel{
+    position: absolute;
+    left:50%;
+    right: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -200px;
+    width: 700px;
+    height: 400px;
+}
+
+.login-content-padding{
+    padding: 8px;
+}
+
+.login-content-horisontal-line{
+    border-right: 1px solid lightgrey;
+}
+
+
+.whiteframe-login md-whiteframe {
+    background: #fff;
+    margin: 30px;
+
+}
+
+.whiteframe-content md-whiteframe{
+    background: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+.content-panel {
+    height: auto;
+    min-height: calc(100% - 10px);
+}
+
+
+.md-imput-container-bottom-login{
+    margin-bottom: 4px;
+}
+
+.md-imput-container-top-login{
+    margin-top: 4px;
+}
+
+.facebook-button{
+    background-color: #3b5998 !important;
+    color: #fff !important;
+    text-align: left !important;
+}
+
+.instagram-button{
+    background-color: #833ab4 !important;
+    color: #fff !important;
+    text-align: left !important;
+}
+
+.linkedin-button{
+    background-color: #0077b5 !important;
+    color: #fff !important;
+    text-align: left !important;
+}
+
+.default-button{
+    background-color: #444 !important;
+    color: #fff !important;
+    text-align: left !important;
+}
+
+.fa-icon-position{
+    position: relative;
+    left: 0px;
+    top: 4px;
+}
+
+.bordered {
+    outline: none !important;
+    border: 1px solid #0077b5 !important;
+}
+
+textarea {
+    outline: none !important;
+    border: none !important;
+}
+
+.margin-top-10{
+    margin-top:10px;
+}
+
+.padding-top-0{
+    padding-top:0px;
+}
+
+.margin-0{
+    margin:0px;
+}

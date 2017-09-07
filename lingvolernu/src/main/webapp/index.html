@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="instaApp">
+    <head>
+        <title>Lingvo Lernu</title>
+        <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-cookies/angular-cookies.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+
+        <script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>        
+        <script type="text/javascript" src="node_modules/angular-mocks/angular-mocks.js"></script>
+        <script type="text/javascript" src="node_modules/angular-aria/angular-aria.min.js"></script>
+
+        <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-material/angular-material.min.js"></script>
+        <script type="text/javascript" src="node_modules/restangular/dist/restangular.min.js"></script>
+        <script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
+
+
+        <script type="text/javascript" src="app.js"></script>
+
+        <script type="text/javascript" src="controllers/LoginCtrl.js"></script>
+        <script type="text/javascript" src="controllers/MainCtrl.js"></script>
+        <script type="text/javascript" src="controllers/GalleryCtrl.js"></script>
+        <script type="text/javascript" src="factories/LoginAPI.js"></script>
+        <script type="text/javascript" src="services/RestService.js"></script>
+
+        <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+    </head>
+    <body>
+        <div id="fb-root">
+        </div>
+            <div ui-view="internalView"></div>
+            <div ui-view="mainView"></div>
+    </body>
+</html>
